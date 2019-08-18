@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Создайте при помощи Emmet HTML-коментарий. -->
+    h1.red{Text}+c{Description}
+    <h1 class="red">Text</h1>
+    <!--  -->
+
+    <!-- 2. Создайте при помощи Emmet HTML-элемент с текстом внутри -->
+    div#linkin>p>lorem20
+    <div id="linkin">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, excepturi consequuntur dolores eum eius reprehenderit numquam ex provident eveniet maiores!</p>
+    </div>    
+     
+    
+    <!-- 3. Создайте при помощи Emmet элемент div с атрибутом data-test=test -->
+    div[data-test=test]
+    <div data-test="test"></div>
+
+    <!-- 4. При помощи плагина быстрой вёрстки (Emmet) получите разметку навигации на сайте (nav),  -->
+    <!-- с десятью гиперссылками. Примечание: гиперссылки быть внутри HTML-элемента li, атрибут href должен содержать пустой хэш (#). -->
+    nav>ul>li*10>a[href=#]
+    <nav>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+
+    <!-- 5. При помощи плагина быстрой вёрстки (Emmet) получите разметку трёхколоночной страницы с элементами section, article, nav, header, footer. -->
+
+    .container>section+article+nav+header+footer
+    <div class="container">
+        <section></section>
+        <article></article>
+        <nav></nav>
+        <header></header>
+        <footer></footer>
+    </div>
+
+    <!-- 6. Проверьте задачу 5 на валидаторе и прикрепите скриншот. -->
+
+    <!-- 7. Попробовать разные тектовые редакторы (Notepad++, SublimeText, WebStorm) -->
+    <!-- Считаю, что WebStorm более продвинутый из всех, но он платный... -->
+
+    <!-- 8. Добавьте HTML теги внутри lorem..., которые подчеркивают важность слова или фразы. -->
+     div+div>p>span>lorem5+em>lorem5
+     .col>p>lorem20+span>lorem5+em>lorem5     
+
+    <!-- или так? -->
+    <div class="text">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <strong>Nihil molestiae unde pariatur cum itaque mollitia</strong> officiis quam aspernatur 
+            blanditiis soluta.</p>
+            <p>Lorem ipsum dolor sit amet consectetur<u>adipisicing elit</u>. Placeat, nulla!</p>
+    </div>
+    <!-- 9. Добавьте спецсимволы для отображения символа авторского права -->
+    <code>&lt;@&gt;</code>
+    <code>@</code>
+
+    <!-- 10. Создайте гиперссылку, которая выполняла переход на ресурс в новом окне. -->
+    .container>ul>li>a[href=new_page.html]{New page} 
+    <div class="container">
+        <ul>
+            <li><a href="new_page.html">New page</a></li>
+        </ul>
+    </div>        
+
+    <!-- 11. Создайте гиперссылку, при наведении на которую, будет появляться однострочная текстовая подсказка.   -->
+    .container>ul>li>a[href=#]>abbr[title="This is my hint"]{My first lesson,I am styding Emmet}
+    <div class="container">
+        <ul>
+            <li><a href="#"><abbr title="This is my hint">My first lesson,I am styding Emmet</abbr></a></li>
+        </ul>
+    </div>
+
+    <!-- 12. Создайте гиперссылку на документ, формат которого отличен от .HTML -->
+
+    .container>a[href=Desert.jpeg]{Picture}
+    <div class="container">
+        <a href="Desert.jpg">Picture</a>        
+    </div>   
+    
+    <!-- 13. Создайте гиперссылку в нижней части страницы с текстом «Вверх». При нажатии, должен происходить переход к верхней части страницы -->
+    .container>a[href="#linkin"]{Вверх}
+   <div class="container"><a href="#linkin">Вверх</a></div>
+
+   <!-- 14. Создайте гиперссылку на HTML-страницу, расположенную в папке ниже уровнем -->
+   .container>a[href=new_folder/tesk14.html]{Click here, please}
+   <div class="container"><a href="new_folder/tesk14.html">Click here, please</a></div>
+
+   <!-- 15. Напишите гиперссылку на HTML-страницу, расположенную в папке выше уровнем -->
+   <div class="container"><a href="../top_index.html">Go to Top_Index.html!!!</a></div>
+
+   <!-- 16. Создайте две HTML-страницы. Пропишите взаимные гиперссылки у созданных HTML-страниц. Примечание: 
+    нужно, при нажатии на гиперссылку переходить на вторую страницу, а нажав на гиперссылку второй страницы — переходить на первую. -->
+    <div class="container"><a href="../top_index.html">Go to Top_Index.html!!!</a></div>
+    <div class="container"><a href="top_folder/index.html">RETURN TO ASSIGN WORK</a></div>
+   
+
+
+</body>
+</html>
